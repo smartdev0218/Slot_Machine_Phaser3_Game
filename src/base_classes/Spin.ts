@@ -98,7 +98,7 @@ export default class Spin {
           }
         }
         // check streak >= 3
-        if (streak >= 3) {
+        if (streak >= 1) {
           lineIndx++;
           Options.winningLines.push(lineIndx);
           // audio win
@@ -134,8 +134,12 @@ export default class Spin {
     }
 
     mathMoney(symbolName: any, streak: any) {
-        let index = streak - 3;
-        if(streak === 3)
+        let index = streak - 1;
+        if(streak === 1)
+            this.symbolValue(symbolName, index); 
+        if(streak === 2)
+            this.symbolValue(symbolName, index); 
+        else if(streak === 3)
             this.symbolValue(symbolName, index); 
         else if(streak === 4) 
             this.symbolValue(symbolName, index);
@@ -213,20 +217,20 @@ export default class Spin {
         //function set width text win
         let width = this.setTextWidthWin();
         //check empty text win
-        // if (!this.scene.txtWin) {
-        //     this.scene.txtWin = this.scene.add.text(width, Config.height - 130, 'WIN: ' + Options.moneyWin + ' $ ', {
-        //         fontSize : '20px',
-        //         color : '#25a028',
-        //         fontFamily : 'PT Serif'
-        //     });
-        // } else {
-        //     this.scene.txtWin.destroy();
-        //     this.scene.txtWin = this.scene.add.text(width, Config.height - 130, 'WIN: ' + Options.moneyWin + ' $ ', {
-        //         fontSize : '20px',
-        //         color : '#25a028',
-        //         fontFamily : 'PT Serif'
-        //     });
-        // }
+        if (!this.scene.txtWin) {
+            this.scene.txtWin = this.scene.add.text(width, Config.height - 130, 'WIN: ' + Options.moneyWin + ' $ ', {
+                fontSize : '20px',
+                color : '#25a028',
+                fontFamily : 'PT Serif'
+            });
+        } else {
+            this.scene.txtWin.destroy();
+            this.scene.txtWin = this.scene.add.text(width, Config.height - 130, 'WIN: ' + Options.moneyWin + ' $ ', {
+                fontSize : '20px',
+                color : '#25a028',
+                fontFamily : 'PT Serif'
+            });
+        }
         //save localStorage
         this.scene.baseSpin.saveLocalStorage();
     }

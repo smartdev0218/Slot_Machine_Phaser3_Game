@@ -81,9 +81,9 @@ export default class BaseSpin {
     this.scene.valueMoney -= Options.coin * Options.line;
     this.scene.txtMoney.setText(this.scene.valueMoney + "$");
     // remove text txtwin
-    // if (this.scene.txtWin) {
-    //   this.scene.txtWin.destroy();
-    // }
+    if (this.scene.txtWin) {
+      this.scene.txtWin.destroy();
+    }
   }
 
   setColor(): void {
