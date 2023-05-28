@@ -98,7 +98,7 @@ export default class Spin {
           }
         }
         // check streak >= 3
-        if (streak >= 1) {
+        if (streak >= 3) {
           lineIndx++;
           Options.winningLines.push(lineIndx);
           // audio win
@@ -134,12 +134,12 @@ export default class Spin {
     }
 
     mathMoney(symbolName: any, streak: any) {
-        let index = streak - 1;
-        if(streak === 1)
-            this.symbolValue(symbolName, index); 
-        if(streak === 2)
-            this.symbolValue(symbolName, index); 
-        else if(streak === 3)
+        let index = streak - 3;
+        // if(streak === 1)
+        //     this.symbolValue(symbolName, index); 
+        // if(streak === 2)
+        //     this.symbolValue(symbolName, index); 
+        if(streak === 3)
             this.symbolValue(symbolName, index); 
         else if(streak === 4) 
             this.symbolValue(symbolName, index);
