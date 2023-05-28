@@ -1,7 +1,6 @@
 import Config from '../config';
 import Options from '../options';
 import Sprite from './Sprite';
-import GameScene from '~/base_scenes/Game';
 
 //Class Spin
 export default class Spin {
@@ -98,7 +97,7 @@ export default class Spin {
           }
         }
         // check streak >= 3
-        if (streak >= 3) {
+        if (streak >= 1) {
           lineIndx++;
           Options.winningLines.push(lineIndx);
           // audio win
@@ -115,7 +114,7 @@ export default class Spin {
       this.resetOptions();
     }
   
-    getLineArray(lineArr: Array<number>) {
+    getLineArray(lineArr: any): void {
       if (!lineArr.length) {
         return;
       }
@@ -134,12 +133,12 @@ export default class Spin {
     }
 
     mathMoney(symbolName: any, streak: any) {
-        let index = streak - 3;
-        // if(streak === 1)
-        //     this.symbolValue(symbolName, index); 
-        // if(streak === 2)
-        //     this.symbolValue(symbolName, index); 
-        if(streak === 3)
+        let index = streak - 1;
+        if(streak === 1)
+            this.symbolValue(symbolName, index); 
+        if(streak === 2)
+            this.symbolValue(symbolName, index); 
+        else if(streak === 3)
             this.symbolValue(symbolName, index); 
         else if(streak === 4) 
             this.symbolValue(symbolName, index);

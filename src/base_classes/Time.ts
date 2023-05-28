@@ -1,5 +1,4 @@
 import Config from '../config';
-import GameScene from '~/base_scenes/Game';
 
 //Class Time
 export default class Time {

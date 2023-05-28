@@ -1,7 +1,6 @@
 import Options from "../options";
 import Config from "../config";
 import Sprite from "./Sprite";
-import GameScene from "~/base_scenes/Game";
 
 // Class Info
 export default class Info {

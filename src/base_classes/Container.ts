@@ -1,5 +1,4 @@
 import Options from "../options";
-import GameScene from "~/base_scenes/Game";
 
 // Class Container
 export default class Container extends Phaser.GameObjects.Container {

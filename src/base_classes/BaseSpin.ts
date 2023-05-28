@@ -3,7 +3,6 @@ import Options from "../options";
 // import class
 import Sprite from "./Sprite";
 import Tween from "./Tween";
-import GameScene from "~/base_scenes/Game";
 
 // Class Base Spin
 export default class BaseSpin {

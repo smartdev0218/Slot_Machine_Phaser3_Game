@@ -1,6 +1,5 @@
 import Options from '../options';
 import Spin from './Spin';
-import GameScene from '~/base_scenes/Game';
 
 //Class Tween
 export default class Tween {   

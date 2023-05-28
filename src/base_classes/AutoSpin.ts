@@ -3,7 +3,6 @@ import Options from '../options';
 //import Class
 import Sprite from './Sprite';
 import Tween from './Tween';
-import GameScene from '~/base_scenes/Game';
 
 //Class Auto Spin
 export default class AutoSpin {

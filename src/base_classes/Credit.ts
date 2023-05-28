@@ -1,7 +1,6 @@
 import Options from "../options";
 import Sprite from "./Sprite";
 import Config from "../config";
-import GameScene from "~/base_scenes/Game";
 
 // Class Credit
 export default class Credit {

@@ -12,7 +12,7 @@
 				{
 					"filename": "payline_2.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -33,7 +33,7 @@
 				{
 					"filename": "payline_3.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -54,7 +54,7 @@
 				{
 					"filename": "payline_1.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -75,7 +75,7 @@
 				{
 					"filename": "payline_16.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -96,7 +96,7 @@
 				{
 					"filename": "payline_17.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -117,7 +117,7 @@
 				{
 					"filename": "payline_12.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -138,7 +138,7 @@
 				{
 					"filename": "payline_13.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -159,7 +159,7 @@
 				{
 					"filename": "payline_6.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -180,7 +180,7 @@
 				{
 					"filename": "payline_7.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -201,7 +201,7 @@
 				{
 					"filename": "payline_15.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -222,7 +222,7 @@
 				{
 					"filename": "payline_14.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -243,7 +243,7 @@
 				{
 					"filename": "payline_20.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -264,7 +264,7 @@
 				{
 					"filename": "payline_11.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -285,7 +285,7 @@
 				{
 					"filename": "payline_10.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -306,7 +306,7 @@
 				{
 					"filename": "payline_8.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -327,7 +327,7 @@
 				{
 					"filename": "payline_9.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -348,7 +348,7 @@
 				{
 					"filename": "payline_5.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -369,7 +369,7 @@
 				{
 					"filename": "payline_4.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -390,7 +390,7 @@
 				{
 					"filename": "payline_18.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640
@@ -411,7 +411,7 @@
 				{
 					"filename": "payline_19.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 1500,
 						"h": 640

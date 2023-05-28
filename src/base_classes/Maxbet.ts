@@ -1,7 +1,6 @@
 import Config from "../config";
 import Options from "../options";
 import Sprite from "./Sprite";
-import GameScene from "~/base_scenes/Game";
 
 // Class Maxbet
 export default class Maxbet {

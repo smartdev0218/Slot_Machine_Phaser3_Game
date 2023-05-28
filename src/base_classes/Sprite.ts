@@ -1,5 +1,3 @@
-import GameScene from "~/base_scenes/Game";
-
 //Class Sprite
 export default class Sprite extends Phaser.GameObjects.Sprite {
     constructor(
