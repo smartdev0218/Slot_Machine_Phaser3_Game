@@ -14,10 +14,11 @@ export default class Tween {
     target3: any;
     target4: any;
     target5: any;
-    
+
     constructor(scene: any) {
         this.scene = scene;
         this.renderTweens();
+        Options.getSymbolNum();
     }
 
     private renderTweens() {
@@ -55,6 +56,47 @@ export default class Tween {
                             const symbolsName = this.targets[0].list[i].frame.name;
                             this.targets[0].list[i].setTexture('symbols', symbolsName);
                         }
+                        //combination reels with winning rate
+                        if(Options.line == 1)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 2)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 3)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 4)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 5)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 6)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 7)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 8)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 9)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 10)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 11)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 12)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 13)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 14)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 15)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 16)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 17)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 18)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 19)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
+                        else if(Options.line == 20)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.symbolNum}.png`);
                         //play audio
                         if(this.targets[0].scene.audioMusicName === 'btn_music.png') {
                             this.targets[0].scene.audioObject.audioReelStop.play();
@@ -99,6 +141,47 @@ export default class Tween {
                             const symbolsName = this.targets[0].list[i].frame.name;
                             this.targets[0].list[i].setTexture('symbols', symbolsName);
                         }
+                        //combination reels with winning rate
+                        if(Options.line == 1)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 2)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 3)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 4)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 5)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 6)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 7)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 8)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 9)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 10)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 11)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 12)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 13)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 14)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 15)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 16)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 17)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 18)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 19)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
+                        else if(Options.line == 20)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.getSymbolNum1()}.png`);
                         //play audio
                         if(this.targets[0].scene.audioMusicName === 'btn_music.png') {
                             this.targets[0].scene.audioObject.audioReelStop.play();
@@ -143,6 +226,47 @@ export default class Tween {
                             const symbolsName = this.targets[0].list[i].frame.name;
                             this.targets[0].list[i].setTexture('symbols', symbolsName);
                         }
+                        //combination reels with winning rate
+                        if(Options.line == 1)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 2)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 3)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 4)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 5)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 6)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 7)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 8)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 9)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 10)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 11)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 12)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 13)
+                            this.targets[0].list[2].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 14)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 15)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 16)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 17)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 18)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 19)
+                            this.targets[0].list[3].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
+                        else if(Options.line == 20)
+                            this.targets[0].list[1].setTexture('symbols', `symbols_${Options.getSymbolNum2()}.png`);
                         //play audio
                         if(this.targets[0].scene.audioMusicName === 'btn_music.png') {
                             this.targets[0].scene.audioObject.audioReelStop.play();

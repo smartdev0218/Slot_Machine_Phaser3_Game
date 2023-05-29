@@ -17,6 +17,55 @@ export default {
 	winningLines : [],
 	i: 0,
 	hsv: [],
+	winningRate: 100, //Set winning rate
+	symbolNum: 0,	//set value of table1
+	symbolNums1: [], 	//set value array of table1
+	symbolNums2: [],	//set value array of table1
+	//get random value
+	getSymbolNum: function() {
+		this.symbolNum = Phaser.Math.Between(0, 9);
+		return this.symbolNum;
+	},
+	//get random value excepting specific value
+	getRandomNumberExcluding: function(min: any, max: any, excluded: any) {
+		let num;
+		do {
+		  num = Math.floor(Math.random() * (max - min + 1)) + min;
+		} while (num === excluded);
+		return num;
+	},
+	//get value array of table1
+	getArry1: function(num: any, rate: any) {
+		this.symbolNums1 = [];
+		for(var i = 0; i < 10; i ++) {
+			if(i < Math.round(rate/10))
+				this.symbolNums1.push(num);
+			else this.symbolNums1.push(this.getRandomNumberExcluding(0, 9, num));
+		}
+	},
+	//get value array of table2
+	getArry2: function(num: any, rate: any) {
+		this.symbolNums2 = [];
+		for(var i = 0; i < 10; i ++) {
+			if(i < Math.round(rate/10))
+				this.symbolNums2.push(num);
+			else this.symbolNums2.push(this.getRandomNumberExcluding(0, 9, num));
+		}
+	},
+	//get value of table1
+	getSymbolNum1: function() {
+		this.getArry1(this.symbolNum, this.winningRate);
+		if(this.winningRate == 100) return this.symbolNum;
+		else return this.symbolNums1[Phaser.Math.Between(0, 9)];
+	},
+	//get value of table2
+	getSymbolNum2: function() {
+		this.symbolNums2 = [];
+		this.getArry2(this.symbolNum, this.winningRate);
+		if(this.winningRate == 100) return this.symbolNum;
+		else return this.symbolNums2[Phaser.Math.Between(0, 9)];
+	},
+	
 	//values symbols0 ==> symbols9
 	payvalues: [
 		[100, 150, 200],
@@ -56,5 +105,5 @@ export default {
 	checkClick: false,
 	symbolHeight: 150,
 	duration: 100,
-	repeat: [5, 10, 15, 20, 25]
+	repeat: [5, 10, 15, 20, 25],
 };
