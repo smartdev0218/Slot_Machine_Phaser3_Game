@@ -19,6 +19,8 @@ export default {
 	hsv: [],
 	winningRate: 100, //Set winning rate
 	symbolNum: 0,	//set value of table1
+	symbolNum1: 0,
+	symbolNum2: 0,
 	symbolNums1: [], 	//set value array of table1
 	symbolNums2: [],	//set value array of table1
 	//get random value
@@ -37,33 +39,50 @@ export default {
 	//get value array of table1
 	getArry1: function(num: any, rate: any) {
 		this.symbolNums1 = [];
-		for(var i = 0; i < 10; i ++) {
-			if(i < Math.round(rate/10))
+		for(var i = 0; i < 1000; i ++) {
+			if(i < Math.round(rate * 10))
 				this.symbolNums1.push(num);
 			else this.symbolNums1.push(this.getRandomNumberExcluding(0, 9, num));
+		}
+		for (var i = 1000 - 1; i > 0; i--) {
+			var j = Math.floor(Math.random() * (i + 1));
+			[this.symbolNums1[i], this.symbolNums1[j]] = [this.symbolNums1[j], this.symbolNums1[i]];
 		}
 	},
 	//get value array of table2
 	getArry2: function(num: any, rate: any) {
 		this.symbolNums2 = [];
-		for(var i = 0; i < 10; i ++) {
-			if(i < Math.round(rate/10))
+		for(var i = 0; i < 1000; i ++) {
+			if(i < Math.round(rate * 10))
 				this.symbolNums2.push(num);
 			else this.symbolNums2.push(this.getRandomNumberExcluding(0, 9, num));
 		}
+		for (var i = 1000 - 1; i > 0; i--) {
+			var j = Math.floor(Math.random() * (i + 1));
+			[this.symbolNums1[i], this.symbolNums1[j]] = [this.symbolNums1[j], this.symbolNums1[i]];
+		} 
 	},
 	//get value of table1
 	getSymbolNum1: function() {
 		this.getArry1(this.symbolNum, this.winningRate);
-		if(this.winningRate == 100) return this.symbolNum;
-		else return this.symbolNums1[Phaser.Math.Between(0, 9)];
+		if(this.winningRate == 100) {
+			this.symbolNum1 = this.symbolNum;
+		}
+		else if(this.winningRate == 0) {
+			this.symbolNum1 = this.getRandomNumberExcluding(0, 9, this.symbolNum);
+		}
+		else {
+			this.symbolNum1 = this.symbolNums1[Phaser.Math.Between(0, 1000)];
+		}
 	},
 	//get value of table2
 	getSymbolNum2: function() {
-		this.symbolNums2 = [];
-		this.getArry2(this.symbolNum, this.winningRate);
-		if(this.winningRate == 100) return this.symbolNum;
-		else return this.symbolNums2[Phaser.Math.Between(0, 9)];
+		if(this.symbolNum == this.symbolNum1) {
+			this.symbolNum2 = this.symbolNum;
+		}
+		else {
+			this.symbolNum2 = this.getRandomNumberExcluding(0, 9, this.symbolNum1);
+		}
 	},
 	
 	//values symbols0 ==> symbols9

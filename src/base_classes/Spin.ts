@@ -76,7 +76,8 @@ export default class Spin {
     }
   
     getWinningLines() {
-      for (let lineIndx = 0; lineIndx < Options.line; lineIndx++) {
+      // for (let lineIndx = 0; lineIndx < Options.line; lineIndx++) {
+        let lineIndx = Options.line - 1;
         let streak = 0;
         let currentkind = null;
         for (
@@ -107,12 +108,50 @@ export default class Spin {
         }
         // audio lose
         this.audioPlayLose();
-      }
+      // }
       // get line array
       this.getLineArray(Options.winningLines);
       // reset Options
       this.resetOptions();
     }
+    // getWinningLines() {
+    //   for (let lineIndx = 0; lineIndx < Options.line; lineIndx++) {
+    //     let streak = 0;
+    //     let currentkind = null;
+    //     for (
+    //       let coordIndx = 0;
+    //       coordIndx < Options.payLines[lineIndx].length;
+    //       coordIndx++
+    //     ) {
+    //       let coords = Options.payLines[lineIndx][coordIndx];
+    //       let symbolAtCoords = Options.result[coords[0]][coords[1]];
+    //       if (coordIndx === 0) {
+    //         currentkind = symbolAtCoords;
+    //         streak = 1;
+    //       } else {
+    //         if (symbolAtCoords != currentkind) {
+    //           break;
+    //         }
+    //         streak++;
+    //       }
+    //     }
+    //     // check streak >= 3
+    //     if (streak >= 3) {
+    //       lineIndx++;
+    //       Options.winningLines.push(lineIndx);
+    //       // audio win
+    //       this.audioPlayWin();
+    //       // function math money
+    //       this.mathMoney(currentkind, streak);
+    //     }
+    //     // audio lose
+    //     this.audioPlayLose();
+    //   }
+    //   // get line array
+    //   this.getLineArray(Options.winningLines);
+    //   // reset Options
+    //   this.resetOptions();
+    // }
   
     getLineArray(lineArr: any): void {
       if (!lineArr.length) {
